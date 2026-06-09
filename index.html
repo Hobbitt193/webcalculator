@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assests/css/style.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="display" id="display" value="0" readonly>
+        <div class="buttons">
+
+            <button class="function buttonbig">C</button>
+            <button class="function">+/-</button>
+            <button class="operator" onclick="appendValue('/')">/</button>
+
+            <button class="number" onclick="appendValue('7')">7</button>        
+            <button class="number" onclick="appendValue('8')">8</button>        
+            <button class="number" onclick="appendValue('9')">9</button>        
+                  
+            <button class="operator" onclick="appendValue('*')">*</button>            
+                        
+            <button class="number" onclick="appendValue('4')">4</button>
+            <button class="number" onclick="appendValue('5')">5</button>
+            <button class="number" onclick="appendValue('6')">6</button>
+           
+            <button class="operator" onclick="appendValue('-')">-</button>
+            
+            
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="operator">+</button>
+
+            <button class="number">0</button>
+            <button class="number">.</button>
+            <button class="operator buttonbig">=</button>
+        </div>
+    </div>
+    <script src="assests/js/main.js"></script>
+    
+</body>
+</html>
