@@ -1,56 +1,127 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #EBEBEB;
-    margin: 0;
+    background-color: #1a0a2e;
 }
+
+.calculator {
+    background: rgba(20, 10, 60, 0.85);
+    border: 2px solid #b44fff;
+    border-radius: 20px;
+    padding: 22px;
+    width: 340px;
+    font-family: 'Orbitron', monospace;
+    box-shadow: 0 0 30px #b44fff55, inset 0 0 20px rgba(180,79,255,0.05);
+}
+
+.disp-wrap {
+    border: 2px solid #ff6ef7;
+    border-radius: 12px;
+    background: rgba(10, 5, 40, 0.9);
+    margin-bottom: 18px;
+    padding: 10px 14px;
+    box-shadow: 0 0 15px #ff6ef755;
+}
+
+.disp-expr {
+    font-size: 11px;
+    color: #ff6ef7aa;
+    text-align: right;
+    min-height: 16px;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Orbitron', monospace;
+}
+
+.disp-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 1.9rem;
+    text-align: right;
+    width: 100%;
+    font-family: 'Orbitron', monospace;
+    text-shadow: 0 0 10px #fff, 0 0 20px #b44fff;
+    letter-spacing: 2px;
+}
+
 .buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
-
 
 button {
-    border-radius: 50%;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 20px;
-    background-color: #ffa630;
-    color: white;
-}
-button:hover{
-    background-color: #ff8c00;
-}
-
-
-.buttonbig {
-    grid-column: span 2;
-    border-radius: 30px;
-}
-.calculator {
-    background-color: #00a7e1;
-    padding: 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0);
-    border-radius: 15px;
-    width: 400px;
-}
-.display {
-    width: 100%;
-    height: 80px;
+    border: 1.5px solid #4a9fff88;
+    background: rgba(15, 30, 80, 0.6);
+    color: #7dd4ff;
+    font-size: 0.85rem;
+    font-family: 'Orbitron', monospace;
     border-radius: 10px;
-    border: 2px solid #cccccc;
-    color: #ffffff;
-    font-size: 3rem;
-    text-align: right;
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 14px 6px;
+    cursor: pointer;
+    text-shadow: 0 0 8px #7dd4ff;
+    box-shadow: 0 0 8px #4a9fff33;
+    transition: all 0.1s;
+    line-height: 1.2;
 }
+button:hover { background: rgba(74,159,255,0.2); box-shadow: 0 0 15px #4a9fff66; }
+button:active { transform: scale(0.95); background: rgba(74,159,255,0.35); }
+
+.btn-op {
+    border-color: #7dd4ff88;
+    color: #7dd4ff;
+}
+
+.btn-clear {
+    border-color: #ff4444aa;
+    background: rgba(80, 10, 10, 0.6);
+    color: #ff6666;
+    text-shadow: 0 0 8px #ff4444;
+    box-shadow: 0 0 8px #ff444433;
+}
+.btn-clear:hover { background: rgba(255,68,68,0.25); }
+
+.btn-eq {
+    border-color: #ffcc00aa;
+    background: rgba(60, 40, 0, 0.6);
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffcc00;
+    font-size: 1.1rem;
+    box-shadow: 0 0 10px #ffcc0033;
+}
+.btn-eq:hover { background: rgba(255,204,0,0.25); }
+
+.btn-purple {
+    border-color: #b44fffaa;
+    background: rgba(40, 10, 80, 0.6);
+    color: #cc88ff;
+    text-shadow: 0 0 8px #b44fff;
+    box-shadow: 0 0 8px #b44fff33;
+    font-size: 0.8rem;
+}
+.btn-purple:hover { background: rgba(180,79,255,0.2); }
+
+.span2 { grid-column: span 2; }
+
+.btn-back {
+    border-color: #ff9944aa;
+    background: rgba(60, 25, 0, 0.6);
+    color: #ffaa55;
+    text-shadow: 0 0 8px #ff9944;
+    box-shadow: 0 0 8px #ff994433;
+    font-size: 1.1rem;
+}
+.btn-back:hover { background: rgba(255,153,68,0.25); }
+
+.span4 { grid-column: span 4; }
